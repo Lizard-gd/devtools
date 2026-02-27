@@ -9,5 +9,6 @@ public class ProgressDemo {
         } else {
             System.out.println("Status: backlog first");
         }
+        System.out.println("Текущая ветка Git: feature/DVT-3");
     }
 }
