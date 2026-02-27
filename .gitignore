@@ -41,18 +41,3 @@ bin/
 
 ### Mac OS ###
 .DS_Store
-
-# Gradle Wrapper
-.gradle/
-build/
-!gradle/wrapper/gradle-wrapper.jar
-!gradle/wrapper/gradle-wrapper.properties
-
-# IntelliJ IDEA
-.idea/
-*.iml
-out/
-
-# OS
-.DS_Store
-Thumbs.db
