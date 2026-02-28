@@ -1,7 +1,7 @@
 package ru.mentee.power;
 
 public class ProgressDemo {
-    public static void main(String[] args) {
+    static void main() {
         var progress = new MenteeProgress("Gleb Druzhinin", 2, 7);
         System.out.println(progress.summary());
         if (progress.readyForSprint()) {
