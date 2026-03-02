@@ -1,6 +1,4 @@
 Хэш коммита очистки: 25c934e
-
-Полная информация о коммите:
 commit 25c934e23706ff676367703cc64174ef47349074
 Author: Gleb Druzhinin <lizardgd99@gmail.com>
 Date:   Mon Mar 2 22:12:40 2026 +0300
