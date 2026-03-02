@@ -1,0 +1,15 @@
+Хэш коммита очистки: 25c934e
+
+Полная информация о коммите:
+commit 25c934e23706ff676367703cc64174ef47349074
+Author: Gleb Druzhinin <lizardgd99@gmail.com>
+Date:   Mon Mar 2 22:12:40 2026 +0300
+
+    Очистить репозиторий; обновить .gitignore
+
+ .gitignore       | 48 +++++++++---------------------------------------
+ .idea/.gitignore | 10 ----------
+ .idea/gradle.xml | 17 -----------------
+ .idea/misc.xml   |  7 -------
+ .idea/vcs.xml    |  7 -------
+ 5 files changed, 9 insertions(+), 80 deletions(-)
