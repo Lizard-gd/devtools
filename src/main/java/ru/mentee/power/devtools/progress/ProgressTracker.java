@@ -38,7 +38,7 @@ public class ProgressTracker {
 
     }
 
-    public static void main(String[] args) {
+    static void main() {
         ProgressTracker tracker = new ProgressTracker();
 
         // Создаём массив mentee (продолжение DVT-2: добавляем прогресс к личной карточке)
