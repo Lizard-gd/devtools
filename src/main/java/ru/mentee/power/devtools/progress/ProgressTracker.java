@@ -8,7 +8,7 @@ public class ProgressTracker {
      * @return строка с информацией о суммарном прогрессе (пройдено/осталось уроков)
      */
     public String calculateTotalProgress(Mentee[] mentees) {
-        // TODO: Реализовать логику подсчёта суммарного прогресса с использованием цикла while
+        // Реализация логики подсчёта суммарного прогресса с использованием цикла while
         // Шаги:
         // 1. Проверить валидность массива (null, пустой)
         if (mentees == null) {
@@ -39,7 +39,7 @@ public class ProgressTracker {
 
     }
 
-    public static void main(String[] args) {
+    static void main() {
         ProgressTracker tracker = new ProgressTracker();
 
         // Создаём массив mentee (продолжение DVT-2: добавляем прогресс к личной карточке)
