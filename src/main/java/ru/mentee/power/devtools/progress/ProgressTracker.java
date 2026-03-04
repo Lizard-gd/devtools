@@ -8,7 +8,6 @@ public class ProgressTracker {
      * @return строка с информацией о суммарном прогрессе (пройдено/осталось уроков)
      */
     public String calculateTotalProgress(Mentee[] mentees) {
-        // TODO: Реализовать логику подсчёта суммарного прогресса с использованием цикла while
         // Шаги:
         // 1. Проверить валидность массива (null, пустой)
         if (mentees == null) {
