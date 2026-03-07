@@ -1,6 +1,8 @@
 plugins {
     id 'java'
     id 'application'
+    id 'checkstyle'
+    id 'jacoco'
 }
 
 group = 'ru.mentee.power'
@@ -32,7 +34,57 @@ dependencies {
     testImplementation 'org.assertj:assertj-core:3.27.7'
     testRuntimeOnly 'org.junit.platform:junit-platform-launcher'
 }
+checkstyle {
+    toolVersion = '10.12.4'  // актуальная версия на 2025 год для Gradle 9.1
+    maxErrors = 0      // даже 1 ошибка (severity=error) → BUILD FAILED
+    maxWarnings = 999  // предупреждения (severity=warning) не блокируют сборку
+    configFile = file("${rootDir}/config/checkstyle/checkstyle.xml") // опционально, custom config
 
+
+}
+
+tasks.withType(Checkstyle).configureEach {
+    group = 'verification'
+}
+
+// Настройка JaCoCo
+jacoco {
+    toolVersion = '0.8.14'  // актуальная версия на 2025 год с поддержкой Java 25
+}
+
+// Настройка тестов
+test {
+    useJUnitPlatform()
+    finalizedBy jacocoTestReport  // генерировать отчёт после тестов
+}
+
+// Настройка JaCoCo отчёта
+jacocoTestReport {
+    dependsOn test  // отчёт генерируется после выполнения тестов
+    reports {
+        xml.required = false
+        csv.required = false
+        html.required = true
+        html.outputLocation = layout.buildDirectory.dir('reports/jacoco/test/html')
+    }
+}
+
+// Настройка проверки покрытия (минимум 80%)
+jacocoTestCoverageVerification {
+    dependsOn jacocoTestReport
+    violationRules {
+        rule {
+            limit {
+                minimum = 0.80  // 80% покрытия инструкций
+            }
+        }
+    }
+}
+
+// Интеграция проверок в lifecycle
+check {
+    dependsOn jacocoTestCoverageVerification
+}
 test {
     useJUnitPlatform()
 }
