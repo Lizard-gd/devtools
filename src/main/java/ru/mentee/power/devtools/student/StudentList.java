@@ -19,38 +19,60 @@ class StudentList {
 
   // нарушение: имя метода
   public void addStudent(Student student) {
-    if (student != null) { // нарушение: нет пробела после if
+    if (student != null) {
       studentList.add(student);
     }
   }
 
-  // нарушение: длинная строка (>120 символов)
-  public List<Student> getStudentsByCity(String city) {
-    return studentList.stream().filter(s -> s.city().equals(city)).toList();
+  public List<Student> getStudentList() {
+    return new ArrayList<>(studentList);
   }
 
-  // нарушение: tab для индентации)
-  public void method() {
+  public List<Student> getStudentsByCity(String city) {
+    return studentList.stream()
+            .filter(s -> s.city().equals(city))
+            .toList();
   }
 
   public void processStudentData(String studentName, int studentAge) {
-      // нарушение: параметры в snake_case
     System.out.println(studentName + " is " + studentAge + " years old");
   }
 
   // Нарушение: NeedBraces (error) отсутствуют фигурные скобки
   boolean isEmpty() {
-    if (studentList.size() == 0) {
-      return true; // нужно добавить {}
-    }
-    return false;
+    return studentList.isEmpty();
   }
 
-  public void demonstrateEmptyCatch() {
-    try {
-      int result = 10 / 0;
-    } catch (ArithmeticException e) {
-    // нарушение: пустой catch блок -  EmptyCatchBlock
+  public boolean removeStudent(Student student1) {
+    if (student1 == null) {
+      return false;
     }
+    return studentList.remove(student1);
   }
+
+  public int getStudentCount() {
+    return studentList.size();
+  }
+
+  public void clearList() {
+    studentList.clear();;
+  }
+
+  public Student findStudentByName(Object o) {
+    if (o == null || studentList.isEmpty()) {
+      return null;
+    }
+
+    String searchName = o.toString();
+
+    for (int i = 0; i < studentList.size(); i++) {
+      Student currentStudent = studentList.get(i);
+      if (currentStudent != null && searchName.equals(currentStudent.getFullName())) {
+        return currentStudent;
+      }
+    }
+
+    return null;
+  }
+
 }
