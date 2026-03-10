@@ -7,6 +7,12 @@
 ./gradlew run
 ./gradlew test
 ```
+# Последние изменения в GitHub:
+[![Java CI with Checkstyle and Tests](https://github.com/Lizard-gd/devtools/actions/workflows/ci.yml/badge.svg)](https://github.com/Lizard-gd/devtools/actions/workflows/ci.yml)
+
+Описание:
+Создал рабочий CI-пайплайн для автоматической проверки кода при каждом push и PR
+
 ### Структура пакета
 
 Все классы находятся в пакете `ru.mentee.power`:
@@ -128,9 +134,3 @@
 Источник: https://google.github.io/styleguide/javaguide.html#s4.1.1-braces-always-used#
 
 # CI-пайплайн настроен
- 
-# DevTools Project
-[![Java CI with Checkstyle and Tests](https://github.com/Lizard-gd/devtools/actions/workflows/ci.yml/badge.svg)](https://github.com/Lizard-gd/devtools/actions/workflows/ci.yml)
-
-Описание проекта:
-Создал рабочий CI-пайплайн для автоматической проверки кода при каждом push и PR
