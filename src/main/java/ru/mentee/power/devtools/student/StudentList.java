@@ -10,7 +10,7 @@ class StudentList {
     studentList = new ArrayList<>();
   }
 
-  private int temp1;
+  private int temp1 ;
   private int temp2;
   private int temp3;
   private int temp4; // нарушение4: Лучше объявлять каждую на отдельной строке
