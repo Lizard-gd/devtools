@@ -12,31 +12,31 @@ jobs:
   build:
     runs-on: ubuntu-latest
     
-steps:
-  - name: Checkout code
-  - uses: actions/checkout@v4
-
-  - name: Make gradlew executable
-    run: chmod +x gradlew
-
-  - name: Set up JDK 25
-    uses: action/setup-java@v4
-    with:
-      distribution: 'temurin'
-      java-version: '25'
-      cache: 'gradle'
-
-  - name: Run Checkstyle
-    run: ./gradlew --no-daemon checksyleMain
-
-  - name: Run tests
-    run: ./gradlew --no-daemon test
-
-  - name: Ganerate JaCoCo report
-    run: ./gradlew --no-daemon jacocoTestReport
-
-  - name: Verify coverage
-    run: ./gradlew --no-daemon jacocoTestCoverageVerification
-
-  - name: Build project
-    run: ./gradlew --no-daemon build    
+  steps:
+    - name: Checkout code
+    - uses: actions/checkout@v4
+    
+    - name: Make gradlew executable
+      run: chmod +x gradlew
+    
+    - name: Set up JDK 25
+      uses: action/setup-java@v4
+      with:
+        distribution: 'temurin'
+        java-version: '25'
+        cache: 'gradle'
+    
+    - name: Run Checkstyle
+      run: ./gradlew --no-daemon checksyleMain
+    
+    - name: Run tests
+      run: ./gradlew --no-daemon test
+    
+    - name: Ganerate JaCoCo report
+      run: ./gradlew --no-daemon jacocoTestReport
+    
+    - name: Verify coverage
+      run: ./gradlew --no-daemon jacocoTestCoverageVerification
+    
+    - name: Build project
+      run: ./gradlew --no-daemon build
