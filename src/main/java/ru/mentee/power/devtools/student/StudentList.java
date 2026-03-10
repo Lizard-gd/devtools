@@ -15,7 +15,7 @@ class StudentList {
   private int temp3;
   private int temp4; // нарушение4: Лучше объявлять каждую на отдельной строке
 
-  private static final int Max_Size = 10; // нарушение: Должно быть MAX_SIZE
+  private static final int MAX_SIZE = 10; // нарушение: Должно быть MAX_SIZE
 
   // нарушение: имя метода
   public void addStudent(Student student) {
