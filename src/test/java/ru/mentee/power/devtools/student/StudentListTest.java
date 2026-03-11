@@ -41,13 +41,7 @@ class StudentListTest {
     studentList.addStudent(null);
     assertEquals(0, studentList.getStudentList().size());
   }
-/*
-*   @Test
-  @DisplayName("Добавление рюкзаков студентов")
-    void addStudentShouldAddMultipleStudents() {
-    studentList.addStudent(student1);
-    assertEquals(3, studentList.getStudentList().size());
-  }*/
+
   @Test
   @DisplayName("Добавление нескольких студентов")
     void addStudentShouldAddMultipleStudents() {

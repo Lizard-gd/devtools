@@ -10,11 +10,19 @@
 
 ---
 
-# Последние изменения в GitHub:
-[![Java CI with Checkstyle and Tests](https://github.com/Lizard-gd/devtools/actions/workflows/ci.yml/badge.svg)](https://github.com/Lizard-gd/devtools/actions/workflows/ci.yml)
+## Continuous Integration (CI)
 
-Описание:
-Создал рабочий CI-пайплайн для автоматической проверки кода при каждом push и PR
+В проекте настроен GitHub Actions CI/CD процесс, который автоматически проверяет код при каждом push в pull request:
+
+**Что проверяется:**
+- ✅ **Checkstyle** — проверка стиля кода (`./gradlew checkstyleMain`)
+- ✅ **Тесты** — запуск всех unit-тестов (`./gradlew test`)
+- ✅ **Сборка** — успешная компиляция проекта (`./gradlew build`)
+
+**Статус CI:** [![Java CI with Checkstyle and Tests](https://github.com/Lizard-gd/devtools/actions/workflows/ci.yml/badge.svg)](https://github.com/Lizard-gd/devtools/actions/workflows/ci.yml)
+
+#### **!!!Важно!!!**
+Все проверки должны проходить успешно перед слиянием PR.
 
 ---
 
