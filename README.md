@@ -7,7 +7,13 @@
 ./gradlew run
 ./gradlew test
 ```
+---
+# DevTools Project
 
+[![Java CI with Checkstyle and Tests](https://github.com/Lizard-gd/devtools/actions/workflows/ci.yml/badge.svg)](https://github.com/Lizard-gd/devtools/actions/workflows/ci.yml)
+
+Описание проекта:
+Создал рабочий CI-пайплайн для автоматической проверки кода при каждом push и PR
 ---
 
 ## Continuous Integration (CI)
